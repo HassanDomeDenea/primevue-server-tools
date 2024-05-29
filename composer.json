@@ -1,0 +1,44 @@
+{
+  "name": "hassandomedenea/primevue-server-tools",
+  "description": "Tools to cooperate with PrimeVue Library",
+  "keywords": ["laravel", "primevue", "server-side", "datatable", "autocomplete"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Hassan AG.",
+      "email": "hassan.domedenea@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "scripts": {
+    "test": "phpunit"
+  },
+  "require": {
+    "php": "^8.2",
+    "illuminate/support": "^9|^10|^11"
+  },
+  "autoload": {
+    "psr-4": {
+      "HassanDomeDenea\\PrimevueServerTools\\": "src/"
+    },
+    "files": [
+      "src/helpers.php"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "HassanDomeDenea\\PrimevueServerTools\\Tests\\": "tests"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "HassanDomeDenea\\PrimevueServerTools\\ServiceProvider"
+      ],
+      "aliases": {
+        "PrimevueServerTools": "HassanDomeDenea\\PrimevueServerTools\\Facade"
+      }
+    }
+  }
+}
